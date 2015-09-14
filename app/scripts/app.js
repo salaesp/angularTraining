@@ -50,4 +50,16 @@
       return { name: 'Luis'}
     }
   }
+})
+.controller('userDataController', function(userDataFactory){
+  userDataFactory.getData().then(function(data) {
+    $scope.result = data;
+  })
+})
+.factory('userDataFactory', function($http){
+  return{
+    getData: function(){
+      return $http.get("http://jsonplaceholder.typicode.com/users");
+    }
+  }
 });
