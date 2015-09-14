@@ -27,9 +27,8 @@ npm install -g grunt-cli
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
+#### Installing
 
-## Testing
+Run `sudo npm install`, and then `bower install` in the download folder
 
-Running `grunt test` will run the unit tests with karma.
-
+Run `grunt serve` for preview.
