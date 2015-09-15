@@ -31,6 +31,7 @@
   'AngularJS',
   'Karma'
   ];
+  $scope.testmodel = 'hola';
 }).controller('MainCtrl', function ($scope, testFactory, testService) {
   $scope.awesomeThings = [
   'HTML5 Boilerplate',
@@ -51,12 +52,7 @@
     }
   }
 })
-.controller('userDataController', function(userDataFactory){
-  userDataFactory.getData().then(function(data) {
-    $scope.result = data;
-  })
-})
-.factory('userDataFactory', function($http){
+.factory('UserDataFactory', function($http){
   return{
     getData: function(){
       return $http.get("http://jsonplaceholder.typicode.com/users");
